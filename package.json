@@ -1,5 +1,5 @@
 {
-    "name": "@teamhive/capacitor-video-recorder",
+    "name": "@soyjesus/capacitor-video-recorder",
     "version": "5.0.0",
     "description": "Records video",
     "main": "dist/plugin.cjs.js",
@@ -10,16 +10,16 @@
         "android/",
         "dist/",
         "ios/Plugin/",
-        "TeamhiveCapacitorVideoRecorder.podspec"
+        "SoyjesusCapacitorVideoRecorder.podspec"
     ],
     "author": "",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/TeamHive/capacitor-video-recorder.git"
+        "url": "https://github.com/soyYisus/capacitor-video-recorder"
     },
     "bugs": {
-        "url": "https://github.com/TeamHive/capacitor-video-recorder/issues"
+        "url": "https://github.com/soyYisus/capacitor-video-recorder"
     },
     "keywords": [
         "capacitor",
