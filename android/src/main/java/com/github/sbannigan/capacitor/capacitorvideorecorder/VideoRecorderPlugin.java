@@ -2,6 +2,7 @@
 package com.github.sbannigan.capacitor.capacitorvideorecorder;
 
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
@@ -433,6 +434,11 @@ public class VideoRecorderPlugin extends Plugin {
                 }
             });
         }
+        
+        GradientDrawable shape = new GradientDrawable();
+        shape.setCornerRadius( frameConfig.borderRadius );
+        
+        fancyCamera.setBackground(shape);
 
     }
 
