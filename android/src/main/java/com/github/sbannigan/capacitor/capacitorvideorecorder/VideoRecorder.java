@@ -181,7 +181,7 @@ public class VideoRecorder extends Plugin {
 
                 PaintDrawable shape = new PaintDrawable();
                 shape.setCornerRadius( currentFrameConfig.borderRadius );
-                ((CoordinatorLayout) bridge.getWebView().getParent()).setBackground(shape);
+                bridge.getWebView().setBackground(shape);
                 
                 bridge.getWebView().bringToFront();
                 bridge.getWebView().getParent().requestLayout();
