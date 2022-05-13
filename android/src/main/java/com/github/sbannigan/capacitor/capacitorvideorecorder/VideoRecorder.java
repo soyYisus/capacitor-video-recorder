@@ -2,6 +2,7 @@
 package com.github.sbannigan.capacitor.capacitorvideorecorder;
 
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.PaintDrawable;
 import android.net.Uri;
 import android.util.DisplayMetrics;
@@ -183,11 +184,6 @@ public class VideoRecorder extends Plugin {
                 ((CoordinatorLayout) bridge.getWebView().getParent()).invalidate();
             }
         });
-
-        PaintDrawable shape = new PaintDrawable();
-        shape.setCornerRadius( currentFrameConfig.borderRadius );
-        bridge.getWebView().setBackgroundColor(0);
-        bridge.getWebView().setBackground(shape);
         
         defaultFrame = new JSObject();
         defaultFrame.put("id", "default");
@@ -413,6 +409,10 @@ public class VideoRecorder extends Plugin {
         fancyCamera.setElevation(9);
         bridge.getWebView().setElevation(9);
         bridge.getWebView().setBackgroundColor(Color.argb(0, 0, 0, 0));
+        GradientDrawable shape = new GradientDrawable();
+        shape.setCornerRadius( currentFrameConfig.borderRadius );
+        bridge.getWebView().setBackground(shape);
+        
         if (frameConfig.stackPosition.equals("front")) {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
