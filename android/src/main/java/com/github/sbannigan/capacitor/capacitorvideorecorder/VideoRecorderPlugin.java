@@ -181,16 +181,16 @@ public class VideoRecorderPlugin extends Plugin {
             @Override
             public void run() {
                 ((CoordinatorLayout) bridge.getWebView().getParent()).addView(fancyCamera, cameraPreviewParams);
-                
-                PaintDrawable shape = new PaintDrawable();
-                shape.setCornerRadius( currentFrameConfig.borderRadius );
-                bridge.getWebView().setBackground(shape);
-                
                 bridge.getWebView().bringToFront();
                 bridge.getWebView().getParent().requestLayout();
                 ((CoordinatorLayout) bridge.getWebView().getParent()).invalidate();
             }
         });
+        
+        PaintDrawable shape = new PaintDrawable();
+        shape.setCornerRadius( currentFrameConfig.borderRadius );
+        bridge.getWebView().setBackgroundColor(0);
+        bridge.getWebView().setBackground(shape);
 
 
         defaultFrame = new JSObject();
